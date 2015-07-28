@@ -1,6 +1,7 @@
 == README
 
-## Bloccit: a Reddit replica to teach the fundamentals of web development and Rails.
+## galia-bloccit: a Reddit replica to teach the fundamentals of web development and Rails.
+A [heroku link](https://galia-bloccit.herokuapp.com)
 Made with my mentor Levi at [Bloc](http://bloc.io).
 
 This README would normally document whatever steps are necessary to get the
