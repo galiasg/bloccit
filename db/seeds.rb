@@ -19,7 +19,9 @@ end
  # Create Advertisements
 50.times do
    Advertisement.create!(
-    title:  Faker::Lorem.words(4)
+    title:  Faker::Lorem.words(4),
+    copy:   Faker::Lorem.paragraph,
+    price:  Faker::Commerce.price,
   )
 end
 
