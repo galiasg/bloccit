@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'questions/index'
+
+  get 'questions/show'
+
+  get 'questions/new'
+
+  get 'questions/edit'
+
   resources :posts
 
   get 'about' => 'welcome#about'
