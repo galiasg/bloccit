@@ -13,6 +13,11 @@ group :development do
   gem "pry-rails"
 end
 
+
+ group :development, :test do
+   gem 'rspec-rails', '~> 3.0'
+ end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,7 +41,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #get bootstrap
 gem 'bootstrap-sass'
 
-gem 'rspec-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
