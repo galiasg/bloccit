@@ -1,15 +1,17 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :update, :show, :destroy]
+
   def index
     @posts = Post.all
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def new
    @post = Post.new
   end
+  
   def create
      @post = Post.new(params.require(:post).permit(:title, :body))
      if @post.save
@@ -22,12 +24,9 @@ class PostsController < ApplicationController
    end
 
   def edit
-     @post = Post.find(params[:id])
-
-   end
+  end
 
   def update
-     @post = Post.find(params[:id])
      if @post.update_attributes(params.require(:post).permit(:title, :body))
        flash[:notice] = "Post was updated."
        redirect_to @post
@@ -35,6 +34,10 @@ class PostsController < ApplicationController
        flash[:error] = "There was an error saving the post. Please try again."
        render :edit
      end
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 
