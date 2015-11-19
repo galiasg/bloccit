@@ -21,6 +21,23 @@
    )
  end
 
- puts "Seed finished"
+
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
+
+ # Create Questions
+ 50.times do
+ # #1
+   Question.create!(
+ # #2
+     title:  RandomData.random_sentence,
+     body:   RandomData.random_paragraph
+   )
+ end
+
+
+ puts "Seed finished"
+ puts "#{Question.count} questions created"
+
+
+
