@@ -86,18 +86,18 @@ RSpec.describe QuestionsController, :type => :controller do
     describe "QUESTION create" do
  # #4
       it "increases the number of questions by 1" do
-        expect{question :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: boolean}}.to change(Question,:count).by(1)
+        expect{post :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: boolean}}.to change(Question,:count).by(1)
       end
 
  # #5
       it "assigns the new question to @question" do
-        question :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: boolean}
+        post :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: boolean}
         expect(assigns(:question)).to eq Question.last
       end
 
  # #6
       it "redirects to the new question" do
-        question :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved:}
+        post :create, question: {title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: boolean}
         expect(response).to redirect_to Question.last
       end
     end
@@ -107,7 +107,7 @@ RSpec.describe QuestionsController, :type => :controller do
        new_title = RandomData.random_sentence
        new_body = RandomData.random_paragraph
 
-       put :update, id: my_question.id, question: {title: new_title, body: new_body}
+       put :update, id: my_question.id, question: {title: new_title, body: new_body, resolved: false}
 
  # #3
        updated_question = assigns(:question)
