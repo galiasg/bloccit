@@ -1,6 +1,6 @@
- include RandomData
+include RandomData
 
-  Create Topics
+#Create Topics
  15.times do
    Topic.create!(
      name:         RandomData.random_sentence,

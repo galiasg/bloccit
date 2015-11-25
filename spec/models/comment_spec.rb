@@ -1,7 +1,7 @@
 require 'rails_helper'
 include RandomData
 
-RSpec.describe Comment, type: :model do
+RSpec.describe Comment, type: => :model do
 
   describe "attributes" do
     let(:comment) { Comment.create!(body: 'Comment Body', post: post) }

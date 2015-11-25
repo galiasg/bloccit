@@ -4,8 +4,8 @@ include RandomData
 RSpec.describe Topic, :type => :model do
     let(:topic) { Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph) }
 
- # #1
-      it { should have_many(:posts) }
+    it { should have_many(:posts) }
+
    describe "attributes" do
       it "should respond to name" do
        expect(topic).to respond_to(:name)
@@ -19,7 +19,6 @@ RSpec.describe Topic, :type => :model do
        expect(topic).to respond_to(:public)
      end
 
- # #2
      it "should be public by default" do
        expect(topic.public).to be(true)
      end
