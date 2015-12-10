@@ -42,6 +42,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #get bootstrap
 gem 'bootstrap-sass'
 
+ # Used for encrypting User passwords
+ gem 'bcrypt'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
