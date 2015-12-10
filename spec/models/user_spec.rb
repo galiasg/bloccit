@@ -1,6 +1,9 @@
 require 'rails_helper'
 RSpec.describe User, :type => :model do
 let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "password") }
+   #Should validate spliting, capitalizing, and joining name
+
+
    # Shoulda tests for name
    it { should validate_presence_of(:name) }
    it { should validate_length_of(:name).is_at_least(1) }
@@ -24,6 +27,12 @@ let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", passw
 
      it "should respond to email" do
        expect(user).to respond_to(:email)
+      end
+
+      it "should capitalize first and last name" do
+        #something here that puts in "galia silva"
+        #and gets back "Galia Silva"
+
       end
   end
 
