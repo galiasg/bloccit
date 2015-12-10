@@ -22,15 +22,18 @@ before_save { self.email = email.downcase }
     puts n1.inspect
     n2 = n1.split
     puts n2.inspect
-    n3 = each{|i| i.capitalize}
-    puts n3.inspect
+    #n3 = each{|i| i.capitalize}
+    #puts n3.inspect
     n4 = [i].join(" ")
     puts n4.inspect
   end
 
+
+
   def self.my_loops
-   n=1
-  until n > 10
+    names = ["yuri", "galia", "andre"]
+   n=0
+  until n >= names.length
     puts n
     n = n + 1
   end
