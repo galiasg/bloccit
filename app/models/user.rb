@@ -30,13 +30,27 @@ before_save { self.email = email.downcase }
 
 
 
+
   def self.my_loops
-    names = ["yuri", "galia", "andre"]
-   n=0
+  names = ["yuri", "galia", "andre"]
+  n=0
   until n >= names.length
-    puts n
+
+    name = names[n]
+    puts "hi " + name
+
     n = n + 1
   end
   puts "done!"
+end
+
+def self.my_for_loop
+
+  names = ["yuri","andre","galia"]
+  for name in names
+    puts "hi " + name
   end
 end
+
+end
+
